@@ -28,12 +28,25 @@ function twoNumbSom(num1, num2) {
 
     return som;
 }
+// Stabilisco se la somma dei due numeri è pari o dispari
+const userNumberEvenOrOdd = isEvenOrOdd(userNumber);
 
-function twoNumbSom(num1, num2) {
-    if(num1 % 2 === 0) {
-        alert("La somma è pari ");
-    }
-    else{
-        alert("La somma è dispari");
-    }
+if(userNumberEvenOrOdd === 'even') {
+    alert('Numero pari');
+} else {
+    alert('Numero dispari');
 }
+
+function isEvenOrOdd(number) {
+    let evenOrOdd;
+    // se il number % 2 da resto 0 -> evenOrOdd = 'even'
+    // altrimenti evenOrOdd = 'odd'
+    if(number % 2 === 0) {
+        evenOrOdd = 'even'
+    } else {
+        evenOrOdd = 'odd';
+    }
+
+    return evenOrOdd;
+}
+
